@@ -1,1 +1,208 @@
+# Introduction
+
+Open-source biodiversity datasets have become widely available thanks to the work of community scientists and platforms such as GBIF. These resources allow geographic information professionals to create maps that illustrate a wide variety of biodiversity issues, including population trends, habitat ranges, and species distribution. However, several challenges arise when using these datasets to create maps that are both usable and discoverable. Common issues include limited or inconsistent metadata on geographic location and the difficulty of implementing multiple standards to ensure that the resulting map is both fit for use and findable.
+
+Metadata is often defined as “data about data,” but in practice it does much more—especially for maps. Metadata provides structured, well-defined context that enables discovery, interpretation, and reuse. It allows users to quickly understand what a map contains, where it applies, and whether it is suitable for their research question, even if they did not collect or create the dataset themselves (Gordon & Habermann, 2018).
+
+In recent years, the number of publicly available Web Map Services (WMS) has increased dramatically, with more than 40,000 active layers covering a wide range of subjects, geographic extents, and projections. This rapid growth has expanded access to geospatial data, but it has also made discovery more challenging. The mere fact that a map is “online” does not guarantee that it is findable, particularly when users are searching for thematic content rather than by location alone (Hu et al., 2016).
+
+In this lesson, you will learn how to assess whether a biodiversity dataset has adequate georeferencing information, how to use Darwin Core to complement ISO 19115 by adding richer thematic descriptions, and how to apply metadata techniques that make your maps both usable and discoverable. By the end, you will be able to evaluate datasets for spatial fitness, apply appropriate metadata standards, and craft effective keywords that improve findability across mapping platforms and repositories.
+## Tutorial Sections
+
+- [Introduction to ISO 19115](02-iso19115.md)
+- [Introduction to Darwin Core](03-darwin-core.md)
+- [Georeferencing in Darwin Core](04-georeferencing.md)
+- [Metadata and Visualization](05-visualization-metadata.md)
+- [Tags and Discoverability](06-tags.md)
+
+# Introduction to ISO 19115
+
+Even before the digital age, metadata played a vital role in communicating essential information about a map. Cartographers routinely documented the map’s title, scale, magnetic north orientation, projection, coordinate system, legend, and other descriptive elements. As mapping moved into the digital era and tools such as ArcGIS made map creation more accessible, the challenge of sharing geographic information without a common understanding of metadata requirements became increasingly apparent. This lack of consistency led the geographic information community to recognize the need for formal, standardized metadata practices to support interoperability across systems and organizations (Brodeur et al., 2019).
+
+In response to this need, the ISO Technical Committee 211 was established in 1994 to develop standards for digital geographic information and geomatics (Brodeur et al., 2019). One of its most significant accomplishments was the publication of ISO 19115 in 2003, the international metadata standard for geographic information. ISO 19115 defines a comprehensive schema and set of metadata elements for describing geographic data. These elements can be applied to entire datasets, dataset series, or individual geographic features and their attributes. The standard also includes conditional elements that support different data types—such as raster and vector data—as well as the description of spatial extent and other critical geographic properties (Ahonen-Rainio, 2006).
+
+While the ISO 19115 standard is widely used for describing geographic information and works well for documenting technical aspects such as spatial extent, coordinate reference systems, and dataset lineage, it provides only a limited way to describe thematic meaning through a single “topic category” field (NOAA, 2012). This makes it difficult to distinguish between datasets that cover very different subjects, which limits semantic richness and discoverability.
+# Introduction to Darwin Core
+
+Imagine you need to find a map showing Spotted Towhee populations in British Columbia. Using the ISO 19115 metadata standard to help guide your search would help you locate maps related to that geographic region and possibly return some thematic keywords. However, if you search using terms that the map’s creator did not include in their metadata, you will likely struggle to find it. Even if you do locate the map, you might discover that the metadata fields were used inconsistently—or that no metadata standard was applied at all—making it difficult to evaluate whether the map is fit for use. This is why it is essential for geographic information professionals to be familiar not only with ISO 19115 but also with complementary standards that describe the thematic content of maps.
+
+For biodiversity data, the most widely used metadata standard is Darwin Core. Its primary goal is to create a common language for describing biodiversity information. Achieving this is challenging because natural history collections and ecological datasets have traditionally been managed using local or institutional practices, leading to inconsistencies in how information is recorded (Wieczorek et al.). Darwin Core addresses this challenge by providing a structured glossary of standardized terms—called elements—that include identifiers, labels, and definitions. These elements facilitate the sharing and integration of biodiversity information across institutions and repositories.
+
+Darwin Core is often used to describe information about taxa, their occurrences, and events associated with those occurrences. One of its key categories is the location class, which documents where an observation or specimen was recorded. These location-related elements allow geospatial professionals to use Darwin Core datasets to create maps that represent biodiversity patterns across space and time. However, these elements are not always implemented correctly or consistently, which can lead to problems with georeferencing accuracy and ultimately reduce the usability and discoverability of the resulting maps.
+# Georeferencing in Darwin Core
+
+Let’s take a look at this map. We see that the vectors in the map have been given geographic locations, yet by looking at the map alone, we don’t know how these points were determined. This is where metadata comes in: it helps us understand how these points were created and determine whether the map is fit for use. Determining whether a map is fit for use is a critical part of making geospatial information discoverable and meaningful to users.
+
+From looking at the data, we can see that these vector points are based on longitude and latitude coordinates. However, there is an issue: there is very limited metadata describing the species occurrences. Blan argues that no matter how specific a location appears, every location has an associated uncertainty. Coordinates without a carefully determined uncertainty value should not be considered proper georeferences; they are simply coordinates with unclear meaning.
+
+We can see that some uncertainty information has been filled in, but there are still many null values. Additionally, most of the other geographic metadata fields are missing. For georeference metadata to be considered accurate, it must be detailed. For instance, it is important to provide a descriptive locality, even when coordinates are included. The locality description should be specific, succinct, unambiguous, complete, and accurate—leaving no room for multiple interpretations. By omitting these metadata fields, key contextual information is lost, limiting the ability to create a rich and accurate map.
+
+Darwin Core provides many fields that help make georeferencing metadata more complete, such as `dwc:georeferenceVerificationStatus`, as well as associated fields like `dwc:georeferencedBy` and `dwc:georeferencedDate`.
+
+Another issue we can identify in the georeferencing metadata becomes apparent when examining the issue field. We can see several issue codes related to georeferencing accuracy. For instance, `coordinateRounded` indicates that the original coordinates were rounded during data interpretation, meaning the recorded latitude and longitude values may lack precision. The `continentDerivedFromCoordinates` flag shows that the value in the `dwc:continent` field (or the interpreted continent) was not explicitly provided by the original recorder, but was instead inferred automatically from the latitude and longitude values.
+
+It is important to note that this dataset was collected through iNaturalist, a platform that relies on community scientists to collect biodiversity observations using their smartphones. While smartphones are generally accurate, their GPS precision can decrease near buildings, bridges, dense vegetation, and other obstructions. As a result, some degree of spatial uncertainty should be expected, and careful review of related georeferencing metadata is necessary.
+
+---
+
+# Activity: Determine Which GBIF Datasets Are Fit for Use
+
+In this activity, you will evaluate four biodiversity datasets downloaded from GBIF—sourced from iNaturalist, eBird, Observation.org, and the Norwegian Species Observation Service. Your goal is to decide which of these datasets is fit for use when creating an accurate map.
+
+Using the guiding questions below, examine each dataset and determine whether the geographic metadata is complete, reliable, and precise enough for mapping.
+
+---
+
+## Use these questions to evaluate each dataset:
+
+### Essential geographic elements
+
+- **Does the dataset include `decimalLatitude` and `decimalLongitude`?**  
+  If no, the dataset cannot be used for mapping.
+
+- **Does it include the country and state/province where the occurrence happened?**  
+  Missing administrative information makes it hard to confirm accuracy.
+
+- **Does it include a locality description?**  
+  Locality provides important context for verifying the coordinates.
+
+- **Does the locality match the latitude and longitude?**  
+  Compare textual locality with coordinates to detect mismatches.
+
+- **Is `coordinateUncertaintyInMeters` included?**  
+  High values may limit the usefulness of the data.
+
+- **Are there records with a value of 0 in `coordinateUncertaintyInMeters`?**  
+  A value of 0 is never valid in Darwin Core and suggests missing or unreliable uncertainty information.
+
+- **Does the dataset include the date and who recorded the occurrence?**  
+  `eventDate` and `recordedBy` help establish data quality and traceability.
+
+- **Does it include any other accuracy elements?**  
+  Examples include `georeferenceRemarks`, `georeferenceProtocol`, or `coordinatePrecision`.
+
+- **Is there an issue field with comments about potential location problems?**  
+  GBIF’s issue field flags data quality problems such as invalid coordinates or mismatched locality.
+
+---
+
+### Additional evaluation questions
+
+- **Which fields are left blank?**  
+  Missing fields may indicate poor documentation or unreliable spatial data.
+
+- **How does missing data in fields such as `coordinatePrecision`, `elevation`, `elevationAccuracy`, `depth`, or `depthAccuracy` impact the validity of the map you want to create?**
+
+- **How do the documented data issues affect the accuracy of the mapped locations?**  
+  Consider whether the dataset would create misleading or incorrect spatial patterns.
+
+---
+
+<!-- TODO: Add dataset links here once spreadsheets are uploaded -->
+# Metadata and Visualization
+
+One of the core challenges is the semantic gap between how humans and computers understand map content. Humans can interpret a high-level theme from visual cues or context, while computers rely entirely on structured metadata. As a result, a map may be technically published yet still remain undiscoverable if its metadata does not accurately describe its thematic content (Hu et al., 2016). For example, a map might be named after a region although it actually displays a particular wildlife variable, or the service abstract may contain complete technical metadata but offer no meaningful description of what is shown visually. These situations make it difficult for both humans and systems to determine whether the map is appropriate for a given purpose.
+
+Metadata aplays an interpretive role in visualization. Thematic maps frequently include legends, symbols, or color ramps that explain what each visual element means — this is itself a form of metadata, because without it the viewer would have no way to interpret the underlying information (Comenetz, 2004).
+
+You see this map:
+
+![Map Placeholder](/mnt/data/metadata%20final%20project.pdf)
+
+By looking at the map, you might be able to guess the general location if you are familiar with Vancouver, British Columbia. You may recognize Jericho Park or the shoreline, and you might even infer roughly where the data points are located. But you still have no idea what the points represent. Are they showing rabbits? Bird sightings? Pollution levels? Tree species? Visitor counts? Without context, the vector data could represent anything.
+
+This is exactly why metadata is essential. Without metadata to explain the theme, purpose, and meaning of the visualization, the map is neither usable nor discoverable. Users cannot find it through search because nothing in the metadata tells them what it contains. And even if they do stumble across it, they cannot interpret what the points mean, how the data were collected, or whether the map is fit for their intended use.
+
+However, if we add a legend to the map, it immediately helps the user understand what the points represent. A legend is considered a type of metadata because it provides information about the data on the map—specifically, how to interpret the symbols, colors, or categories being displayed.
+
+Now that we know what the points are and where the data is located, the map becomes more interpretable. But even with a legend, there is still critical metadata missing that is not shown visually. Without additional information—such as the data source, date of collection, purpose of the map, geographic extent, or the method used to collect the observations—the map is not fully usable. Users still cannot determine whether the map is reliable, current, or fit for their intended use.
+
+You have now added more important metadata elements to the map to help users understand it. By including a north arrow, users can immediately interpret the directionality of the map. Adding a scale bar also helps users understand distance—allowing them to judge how far apart the points are and how those points relate to surrounding geographic features. These additions make the map far more interpretable and useful.
+
+However, even though the map is starting to make more sense visually, there is still additional information a user might need to determine whether the map is truly useful for their information need. Visual metadata like legends, north arrows, and scale bars help with interpretation, but they do not explain where the data came from, when it was collected, how accurate the coordinates are, or what the overall purpose of the map is. Without this deeper descriptive metadata, the map may still not be fully usable, trustworthy, or fit for use.
+
+Now I have added the name of the creator and the date of creation, which provide essential context for making the map usable. This information allows users to understand who created the map and when it was produced, both of which are crucial for assessing whether the map is trustworthy, up to date, and fit for their intended use. Provenance—knowing the source and the creation date—helps users evaluate the map’s credibility and decide whether it meets the requirements of their project or research question.
+
+---
+
+# Your Turn: Naming and Describing the Vector Points
+
+Below is a map with very limited metadata. You can see that the intention is to represent sightings across two different time periods, but without clear metadata, the meaning of the points is unclear. Using the dataset provided, answer the following questions:
+
+### 1. What metadata would you use to name the vector points in the legend?
+
+Think about which fields in the dataset best describe the time period represented by each point. Metadata elements to consider include:
+
+- year  
+- eventDate  
+- dateIdentified  
+
+Choose the elements that most clearly communicate how the sightings are grouped by time.
+
+### 2. Based on the dataset, what would you name the layer?
+
+Write a clear and descriptive layer name that reflects:
+
+- the species represented  
+- the location  
+- the time period  
+- the type of data  
+
+Your goal is to create a name that helps future users understand exactly what the layer contains.
+
+### 3. What other types of metadata should be added to this map?
+
+Consider what information a user would need to determine whether the map is interpretable, trustworthy, and fit for use.
+# Tags
+
+When you create a map and want to upload it to the web for others to use, you once again need to consider how metadata will influence whether people can discover and understand it. One common platform where users publish their maps is ArcGIS Online, which offers a free public account that allows individuals to create, store, and share maps in ArcGIS’s repository. ArcGIS supports several approaches that creators can use to organize their content and improve the discoverability of their published maps.
+
+ArcGIS recommends beginning with Content Categories. If you belong to an organization or group, you can either create custom categories or use standardized category systems provided by ArcGIS, ISO, or INSPIRE. Each standard includes its own set of thematic categories, including categories related to the environment. The category system you choose will depend on the metadata standards your organization follows or the system that best describes the thematic focus of your map. While ISO 19115 is the most common metadata standard for geographic information, the ArcGIS category options are often more detailed for environmental or biodiversity content. For example, ArcGIS even includes a subcategory specifically for species, which is particularly useful if you are working with biodiversity datasets from platforms such as GBIF.
+
+Although categories provide helpful high-level organization, they cannot fully capture the “aboutness” of every individual map. To supplement this, ArcGIS allows creators to add tags—also known as keywords—that help users discover maps during searches. When people search for a map, they typically think of words or phrases that describe the resource they want. ArcGIS automatically scans map titles, descriptions, and attributes for these terms. This means that if a word already appears in your map’s metadata or attribute table, ArcGIS can find it without you needing to add that exact word as a tag. Instead, you should use tags that introduce additional, relevant terms not already present elsewhere in your metadata.
+
+Choosing effective tags is critical for improving discoverability. Start by identifying the main purpose or message of your map: Is it about population? Species range? Biodiversity within a region? Once you identify the core components of your map, examine your dataset for attributes that represent these themes. Then select keywords that accurately describe these components while also following standardized terminology. Standardization is especially important when working with biodiversity datasets, because it links your map to established vocabulary systems and helps users find your work across multiple platforms. For example, Darwin Core provides standardized terms that promote consistent description and discovery of biodiversity information. Another place to check to look for controlled vocallabary is the Library of Congress subject headings which is a list of controlled vocabulary. While this is often used in library settings it is a good place to check to see how resources are described so that you can easily link your map to concepts that are similar. Also when creating tags it is important to think about your audience. Some people looking for your map might not be familiar with controlled vocabulary so they might use the nomenclature to describe the core concepts of a map. Which is why it is important to include related terms (Lafia et al., 2018). Another important thing to conside when creating tags it is also a good idea consulting to consult the ISO 3166 to get country codes and Getty Thesaurus of Geographic Names to obtain knowledge on controlled vocabulary for that region (Getty Thesaurus of Geographic Names (Getty Research Institute), n.d & ISO - ISO 3166 — Country Codes, n.d.). Using these standardized terms as tags—or incorporating them into your metadata—can significantly improve your map’s findability and interoperability.
+
+---
+
+# Additional Questions to Consider When Creating Tags
+
+### What information is already available on the map?
+
+Before choosing tags, identify what information the map already displays through text, labels, or metadata. Any words that appear on the map itself—including the title, legend labels, species names, place names, or other written elements—will automatically be indexed by ArcGIS and included in search results. Because these terms are already searchable, you do not need to repeat them as tags.
+
+Instead, your job is to identify what information is missing from the map’s visible text and use your tags to fill in those gaps.
+
+### How might different audiences search for this map?
+
+Think about researchers, local residents, park visitors, students, or casual users. Each group may use different search terms or levels of technical language.
+
+### Where did the dataset for the map come from?
+
+(iNaturalist? eBird? Observation.org? Norwegian Species Observation Service?)  
+Dataset sources often contain standardized terms or community-specific vocabulary that you can reuse.
+
+### What is the primary message or purpose of this map?
+
+Is it showing population, distribution, habitat use, wild vs. domestic presence, or another theme?
+
+### Are there standardized vocabulary terms from Darwin Core or Library of Congress Subject Headings (LCSH) that you can use?
+
+Using controlled terms supports consistent description and improves discoverability across systems.
+
+### Which controlled vocabulary lists or codes could you use to describe the geographic location referenced in the map?
+
+Examples include ISO 3166 country/province codes or Getty Thesaurus of Geographic Names (TGN) place names.
+
+### What synonyms or everyday terms might users use instead of controlled vocabulary?
+
+Consider common names, informal expressions, or casual phrases someone might type into a search bar (e.g., “bunny map,” “rabbits in Vancouver,” “wild bunnies at Jericho”).
+
+Using these prompts, create a list of 5–10 tags that would help different types of users find this map.
+
+---
+
+<!-- TODO: Add dataset links here once spreadsheets are uploaded -->
+
+
 
