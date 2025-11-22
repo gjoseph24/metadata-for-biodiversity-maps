@@ -155,54 +155,44 @@ Your goal is to create a name that helps future users understand exactly what th
 Consider what information a user would need to determine whether the map is interpretable, trustworthy, and fit for use.
 # Tags
 
-When you create a map and want to upload it to the web for others to use, you once again need to consider how metadata will influence whether people can discover and understand it. One common platform where users publish their maps is ArcGIS Online, which offers a free public account that allows individuals to create, store, and share maps in ArcGIS’s repository. ArcGIS supports several approaches that creators can use to organize their content and improve the discoverability of their published maps.
+When you create a map and want to upload it to the web for others to use, you once again need to consider how metadata will influence whether people can discover and understand it. One common platform for publishing maps is ArcGIS Online, which offers a free public account that allows individuals to share maps in ArcGIS’s repository. ArcGIS supports several approaches that creators can use to organize their content and improve the discoverability of their published maps (Create, Upload, or Add Content—ArcGIS Enterprise Sites | Documentation for ArcGIS Enterprise, n.d.).
 
-ArcGIS recommends beginning with Content Categories. If you belong to an organization or group, you can either create custom categories or use standardized category systems provided by ArcGIS, ISO, or INSPIRE. Each standard includes its own set of thematic categories, including categories related to the environment. The category system you choose will depend on the metadata standards your organization follows or the system that best describes the thematic focus of your map. While ISO 19115 is the most common metadata standard for geographic information, the ArcGIS category options are often more detailed for environmental or biodiversity content. For example, ArcGIS even includes a subcategory specifically for species, which is particularly useful if you are working with biodiversity datasets from platforms such as GBIF.
+ArcGIS recommends beginning with Content Categories. If you belong to an organization or group, you can either create custom categories or use standardized category systems provided by ArcGIS, ISO, or INSPIRE. Each standard includes its own set of thematic categories, including categories related to the environment. The category system you choose will depend on the metadata standards your organization follows or the system that best describes the thematic focus of your map. While ISO 19115 is the most common metadata standard for geographic information, the ArcGIS category options are often more detailed for environmental or biodiversity content. For example, ArcGIS even includes a subcategory specifically for species, which is particularly useful if you are working with biodiversity datasets from platforms such as GBIF (Content Categories—ArcGIS Online Help | Documentation, n.d.).
 
-Although categories provide helpful high-level organization, they cannot fully capture the “aboutness” of every individual map. To supplement this, ArcGIS allows creators to add tags—also known as keywords—that help users discover maps during searches. When people search for a map, they typically think of words or phrases that describe the resource they want. ArcGIS automatically scans map titles, descriptions, and attributes for these terms. This means that if a word already appears in your map’s metadata or attribute table, ArcGIS can find it without you needing to add that exact word as a tag. Instead, you should use tags that introduce additional, relevant terms not already present elsewhere in your metadata.
+Although categories provide helpful high-level organization, they cannot fully capture the “aboutness” of every individual map. To supplement this, ArcGIS allows creators to add tags, also known as keywords, that help users discover maps during searches. When people search for a map, they typically think of words or phrases that describe the resource they want. ArcGIS automatically scans map titles, descriptions, and attributes for these terms. This means that if a word already appears in your map’s metadata or attribute table, ArcGIS can find it without you needing to add that exact word as a tag. Instead, you should use tags that introduce additional, relevant terms not already present elsewhere in your metadata (“Use Tags Effectively,” n.d.).
 
-Choosing effective tags is critical for improving discoverability. Start by identifying the main purpose or message of your map: Is it about population? Species range? Biodiversity within a region? Once you identify the core components of your map, examine your dataset for attributes that represent these themes. Then select keywords that accurately describe these components while also following standardized terminology. Standardization is especially important when working with biodiversity datasets, because it links your map to established vocabulary systems and helps users find your work across multiple platforms. For example, Darwin Core provides standardized terms that promote consistent description and discovery of biodiversity information. Another place to check to look for controlled vocallabary is the Library of Congress subject headings which is a list of controlled vocabulary. While this is often used in library settings it is a good place to check to see how resources are described so that you can easily link your map to concepts that are similar. Also when creating tags it is important to think about your audience. Some people looking for your map might not be familiar with controlled vocabulary so they might use the nomenclature to describe the core concepts of a map. Which is why it is important to include related terms (Lafia et al., 2018). Another important thing to conside when creating tags it is also a good idea consulting to consult the ISO 3166 to get country codes and Getty Thesaurus of Geographic Names to obtain knowledge on controlled vocabulary for that region (Getty Thesaurus of Geographic Names (Getty Research Institute), n.d & ISO - ISO 3166 — Country Codes, n.d.). Using these standardized terms as tags—or incorporating them into your metadata—can significantly improve your map’s findability and interoperability.
+Choosing effective tags is critical for improving discoverability. Start by identifying the main purpose or message of your map: Is it about population? Species range? Biodiversity within a region? Once you identify the core components of your map, examine your dataset for attributes that represent these themes. Then select keywords that accurately describe these components and follow standardized terminology. Standardization is critical when working with biodiversity datasets, because it links your map to established vocabulary systems and helps users find your work across multiple platforms. For example, Darwin Core provides standardized terms that promote consistent description and discovery of biodiversity information (Darwin Core, n.d.). Another place to look for controlled vocabulary is the Library of Congress Subject Headings, a list of controlled vocabulary. While this is often used in library settings, it is a good place to check to see how resources are described so that you can easily link your map to concepts that are similar (Subject Headings and Genre/Form Terms (Cataloging and Acquisitions at the Library of Congress), n.d.). Also when creating tags it is important to think about your audience. Some people looking for your map might not be familiar with controlled vocabulary so they might use the nomenclature to describe the core concepts of a map. Which is why it is important to include related terms (Lafia et al., 2018). Another important thing to conside when creating tags it is also a good idea consulting to consult the ISO 3166 to get country codes and Getty Thesaurus of Geographic Names to obtain knowledge on controlled vocabulary for that region (Getty Thesaurus of Geographic Names (Getty Research Institute), n.d & ISO - ISO 3166 — Country Codes, n.d.). Using these standardized terms as tags or incorporating them into your metadata can significantly improve your map’s findability.
+
+---
+
+![Map of Rabbits in Jericho Park](assets/Screenshot%20%28242%29.png)
 
 ---
 
 # Additional Questions to Consider When Creating Tags
 
-### What information is already available on the map?
+What information is already available on the map?  
+Before choosing tags, identify what information the map already displays through text, labels, or metadata. Any words that appear on the map itself, including the title, legend labels, species names, place names, or other written elements, will automatically be indexed by ArcGIS and included in search results. Because these terms are already searchable, you do not need to repeat them as tags.
 
-Before choosing tags, identify what information the map already displays through text, labels, or metadata. Any words that appear on the map itself—including the title, legend labels, species names, place names, or other written elements—will automatically be indexed by ArcGIS and included in search results. Because these terms are already searchable, you do not need to repeat them as tags.
+How might different audiences search for this map?  
+Think about researchers or casual users. Each group may use different search terms or levels of technical language.
 
-Instead, your job is to identify what information is missing from the map’s visible text and use your tags to fill in those gaps.
-
-### How might different audiences search for this map?
-
-Think about researchers, local residents, park visitors, students, or casual users. Each group may use different search terms or levels of technical language.
-
-### Where did the dataset for the map come from?
-
-(iNaturalist? eBird? Observation.org? Norwegian Species Observation Service?)  
+Where did the dataset for the map come from?  
 Dataset sources often contain standardized terms or community-specific vocabulary that you can reuse.
 
-### What is the primary message or purpose of this map?
-
+What is the primary message or purpose of this map?  
 Is it showing population, distribution, habitat use, wild vs. domestic presence, or another theme?
 
-### Are there standardized vocabulary terms from Darwin Core or Library of Congress Subject Headings (LCSH) that you can use?
-
+Are there standardized vocabulary terms from Darwin Core or Library of Congress Subject Headings (LCSH) that you can use?  
 Using controlled terms supports consistent description and improves discoverability across systems.
 
-### Which controlled vocabulary lists or codes could you use to describe the geographic location referenced in the map?
+Which controlled vocabulary lists or codes could you use to describe the geographic location referenced in the map?  
+Examples include ISO 3166 country/province codes or Getty Thesaurus of Geographic Names place names.
 
-Examples include ISO 3166 country/province codes or Getty Thesaurus of Geographic Names (TGN) place names.
-
-### What synonyms or everyday terms might users use instead of controlled vocabulary?
-
-Consider common names, informal expressions, or casual phrases someone might type into a search bar (e.g., “bunny map,” “rabbits in Vancouver,” “wild bunnies at Jericho”).
+What synonyms or everyday terms might users use instead of controlled vocabulary?  
+Consider common names, informal expressions, or casual phrases someone might use.
 
 Using these prompts, create a list of 5–10 tags that would help different types of users find this map.
-
----
-
-<!-- TODO: Add dataset links here once spreadsheets are uploaded -->
 
 
 
