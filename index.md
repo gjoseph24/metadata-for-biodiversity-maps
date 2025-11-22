@@ -29,76 +29,75 @@ Imagine you need to find a map showing Spotted Towhee populations in British Col
 For biodiversity data, the most widely used metadata standard is Darwin Core. Its primary goal is to create a common language for describing biodiversity information. Achieving this is challenging because natural history collections and ecological datasets have traditionally been managed using local or institutional practices, leading to inconsistencies in how information is recorded (Wieczorek et al.). Darwin Core addresses this challenge by providing a structured glossary of standardized terms—called elements—that include identifiers, labels, and definitions. These elements facilitate the sharing and integration of biodiversity information across institutions and repositories.
 
 Darwin Core is often used to describe information about taxa, their occurrences, and events associated with those occurrences. One of its key categories is the location class, which documents where an observation or specimen was recorded. These location-related elements allow geospatial professionals to use Darwin Core datasets to create maps that represent biodiversity patterns across space and time. However, these elements are not always implemented correctly or consistently, which can lead to problems with georeferencing accuracy and ultimately reduce the usability and discoverability of the resulting maps.
-# Georeferencing in Darwin Core
+# Georeferencing in Dawrin core 
 
-Let’s take a look at this map. We see that the vectors in the map have been given geographic locations, yet by looking at the map alone, we don’t know how these points were determined. This is where metadata comes in: it helps us understand how these points were created and determine whether the map is fit for use. Determining whether a map is fit for use is a critical part of making geospatial information discoverable and meaningful to users.
+![Map of rabbit observations](assets/Screenshot%20%28242%29.png)
 
-From looking at the data, we can see that these vector points are based on longitude and latitude coordinates. However, there is an issue: there is very limited metadata describing the species occurrences. Blan argues that no matter how specific a location appears, every location has an associated uncertainty. Coordinates without a carefully determined uncertainty value should not be considered proper georeferences; they are simply coordinates with unclear meaning.
+Let’s take a look at this map. We see that the vector points in the map have been given geographic locations, yet by looking at the map alone, we don’t know how these points were determined. This is where metadata comes in; it helps us understand how these points were created and determine whether the map is fit for use. Deciding whether a dataset  is fit for use is a critical part of making high quality maps.
 
-We can see that some uncertainty information has been filled in, but there are still many null values. Additionally, most of the other geographic metadata fields are missing. For georeference metadata to be considered accurate, it must be detailed. For instance, it is important to provide a descriptive locality, even when coordinates are included. The locality description should be specific, succinct, unambiguous, complete, and accurate—leaving no room for multiple interpretations. By omitting these metadata fields, key contextual information is lost, limiting the ability to create a rich and accurate map.
+![Excerpt of occurrence table](assets/Screenshot%20%28244%29.png)
 
-Darwin Core provides many fields that help make georeferencing metadata more complete, such as `dwc:georeferenceVerificationStatus`, as well as associated fields like `dwc:georeferencedBy` and `dwc:georeferencedDate`.
+From the data, we can see that these vector points are defined by longitude and latitude coordinates. However, there is an issue; minimal metadata describes the location where the occurrence took place. Chapman & Wieczorek ( 2020) argues that no matter how specific a location appears, every location has an associated uncertainty. Coordinates without a carefully determined uncertainty value should not be considered proper georeferences; they are simply coordinates with unclear meaning.
+We can see that some uncertainty information has been filled in, but there are still many null values. Additionally, most of the other geographic metadata fields are missing. For georeference metadata to be considered accurate, it must be detailed. For instance, it is important to provide a descriptive locality, even when coordinates are included. The locality description should be specific and accurate leaving no room for multiple interpretations. By omitting these metadata fields, key contextual information is lost, limiting the ability to create a rich and precise map (Chapman & Wieczorek, 2020).
+Darwin Core provides many fields that help make georeferencing metadata more complete, such as dwc:georeferenceVerificationStatus, as well as associated fields like dwc:georeferencedBy and dwc:georeferencedDate (Darwin Core, n.d.).
 
-Another issue we can identify in the georeferencing metadata becomes apparent when examining the issue field. We can see several issue codes related to georeferencing accuracy. For instance, `coordinateRounded` indicates that the original coordinates were rounded during data interpretation, meaning the recorded latitude and longitude values may lack precision. The `continentDerivedFromCoordinates` flag shows that the value in the `dwc:continent` field (or the interpreted continent) was not explicitly provided by the original recorder, but was instead inferred automatically from the latitude and longitude values.
+![GBIF issue flags screenshot](assets/Screenshot%20%28243%29.png)
 
-It is important to note that this dataset was collected through iNaturalist, a platform that relies on community scientists to collect biodiversity observations using their smartphones. While smartphones are generally accurate, their GPS precision can decrease near buildings, bridges, dense vegetation, and other obstructions. As a result, some degree of spatial uncertainty should be expected, and careful review of related georeferencing metadata is necessary.
+During indexation, GBIF adds an issue field to help address a common data quality issue. We can see several issue codes related to georeferencing accuracy. For instance, Coordinate_Rounded indicates that the original coordinates were rounded during data interpretation, meaning the recorded latitude and longitude values may lack precision. The continent-derived-from-coordinates flag shows that the value in the dwc:continent field (or the interpreted continent) was not explicitly provided by the original recorder, but was instead inferred automatically from the latitude and longitude values (Occurrence Issues and Flags :: Technical Documentation, n.d.).
+It is important to note that this dataset was collected through iNaturalist, a platform that relies on community scientists to collect biodiversity observations using their smartphones. While smartphones are generally accurate, their GPS precision can decrease near buildings, bridges, dense vegetation, and other obstructions. As a result, some degree of spatial uncertainty should be expected, and careful review of related georeferencing metadata is necessary (Chapman & Wieczorek, 2020).
 
 ---
 
-# Activity: Determine Which GBIF Datasets Are Fit for Use
+## Activity: Determine Which GBIF Datasets Are Fit for Use
 
-In this activity, you will evaluate four biodiversity datasets downloaded from GBIF—sourced from iNaturalist, eBird, Observation.org, and the Norwegian Species Observation Service. Your goal is to decide which of these datasets is fit for use when creating an accurate map.
+Datasets for this activity:
 
+- [Norwegian Species Observation Service](datasets/Norwegian%20Species%20Observation%20Service.xls)  
+- [eBird test dataset](datasets/ebird%20test%20data%20set-csv.xls)  
+- [iNaturalist dataset](datasets/inaturlist.xls)  
+- [Observation.org dataset](datasets/observations.org.xls)  
+
+In this activity, you will evaluate four biodiversity datasets downloaded from GBIF, iNaturalist, eBird, Observation.org, and the Norwegian Species Observation Service. Your goal is to decide which of these datasets is best suited for creating an accurate map.
 Using the guiding questions below, examine each dataset and determine whether the geographic metadata is complete, reliable, and precise enough for mapping.
 
----
+Use these questions to evaluate each dataset:
 
-## Use these questions to evaluate each dataset:
+**Essential geographic elements**  
+Does the dataset include decimalLatitude and decimalLongitude?  
+If no, the dataset cannot be used for mapping.  
 
-### Essential geographic elements
+Does it include the country and state/province where the occurrence happened?  
+Missing administrative information makes it hard to confirm accuracy.  
 
-- **Does the dataset include `decimalLatitude` and `decimalLongitude`?**  
-  If no, the dataset cannot be used for mapping.
+Does it include a locality description?  
+Locality provides important context for verifying the coordinates.  
 
-- **Does it include the country and state/province where the occurrence happened?**  
-  Missing administrative information makes it hard to confirm accuracy.
+Does the locality match the latitude and longitude?  
+Compare textual locality with coordinates to detect mismatches.  
 
-- **Does it include a locality description?**  
-  Locality provides important context for verifying the coordinates.
+Is coordinateUncertaintyInMeters included?  
+High values may limit the usefulness of the data.  
 
-- **Does the locality match the latitude and longitude?**  
-  Compare textual locality with coordinates to detect mismatches.
+Are there records with a value of 0 in coordinateUncertaintyInMeters?  
+A value of 0 is never valid in Darwin Core and suggests missing or unreliable uncertainty information.  
 
-- **Is `coordinateUncertaintyInMeters` included?**  
-  High values may limit the usefulness of the data.
+Does the dataset include the date and who recorded the occurrence?  
+eventDate and recordedBy help establish data quality and traceability.  
 
-- **Are there records with a value of 0 in `coordinateUncertaintyInMeters`?**  
-  A value of 0 is never valid in Darwin Core and suggests missing or unreliable uncertainty information.
+Does it include any other accuracy elements?  
+One example would be coordinatePrecision.  
 
-- **Does the dataset include the date and who recorded the occurrence?**  
-  `eventDate` and `recordedBy` help establish data quality and traceability.
+Is there an issue field with comments about potential location problems?  
+GBIF’s issue field flags data quality problems such as invalid coordinates or mismatched locality.  
 
-- **Does it include any other accuracy elements?**  
-  Examples include `georeferenceRemarks`, `georeferenceProtocol`, or `coordinatePrecision`.
+Which fields are left blank?  
+Missing fields may indicate poor documentation or unreliable spatial data.  
 
-- **Is there an issue field with comments about potential location problems?**  
-  GBIF’s issue field flags data quality problems such as invalid coordinates or mismatched locality.
+How does missing data in fields such as, coordinatePrecision impact the validity of the map you want to create?  
 
----
+How do the documented issues affect the accuracy of the mapped locations?  
+Consider whether the dataset would create misleading or incorrect spatial patterns.
 
-### Additional evaluation questions
-
-- **Which fields are left blank?**  
-  Missing fields may indicate poor documentation or unreliable spatial data.
-
-- **How does missing data in fields such as `coordinatePrecision`, `elevation`, `elevationAccuracy`, `depth`, or `depthAccuracy` impact the validity of the map you want to create?**
-
-- **How do the documented data issues affect the accuracy of the mapped locations?**  
-  Consider whether the dataset would create misleading or incorrect spatial patterns.
-
----
-
-<!-- TODO: Add dataset links here once spreadsheets are uploaded -->
 # Metadata and Visualization
 
 One of the core challenges is the semantic gap between how humans and computers understand map content. Humans can interpret a high-level theme from visual cues or context, while computers rely entirely on structured metadata. As a result, a map may be technically published yet still remain undiscoverable if its metadata does not accurately describe its thematic content (Hu et al., 2016). For example, a map might be named after a region although it actually displays a particular wildlife variable, or the service abstract may contain complete technical metadata but offer no meaningful description of what is shown visually. These situations make it difficult for both humans and systems to determine whether the map is appropriate for a given purpose.
