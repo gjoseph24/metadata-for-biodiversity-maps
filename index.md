@@ -62,30 +62,29 @@ Using the guiding questions below, examine each dataset and determine whether th
 
 Use these questions to evaluate each dataset:
 
-**Essential geographic elements**  
-Does the dataset include decimalLatitude and decimalLongitude?  
-If no, the dataset cannot be used for mapping.  
+1. Does the dataset include decimalLatitude and decimalLongitude?  
+    -If no, the dataset cannot be used for mapping.  
 
-Does it include the country and state/province where the occurrence happened?  
-Missing administrative information makes it hard to confirm accuracy.  
+2.Does it include the country and state/province where the occurrence happened?  
+   -Missing administrative information makes it hard to confirm accuracy.  
 
-Does it include a locality description?  
-Locality provides important context for verifying the coordinates.  
+3. Does it include a locality description?  
+   -Locality provides important context for verifying the coordinates.  
 
-Does the locality match the latitude and longitude?  
-Compare textual locality with coordinates to detect mismatches.  
+4. Does the locality match the latitude and longitude?  
+    -Compare textual locality with coordinates to detect mismatches.  
 
-Is coordinateUncertaintyInMeters included?  
-High values may limit the usefulness of the data.  
+5.Is coordinateUncertaintyInMeters included?  
+    -High values may limit the usefulness of the data.  
 
-Are there records with a value of 0 in coordinateUncertaintyInMeters?  
-A value of 0 is never valid in Darwin Core and suggests missing or unreliable uncertainty information.  
+6.Are there records with a value of 0 in coordinateUncertaintyInMeters?  
+    -A value of 0 is never valid in Darwin Core and suggests missing or unreliable uncertainty information.  
 
-Does the dataset include the date and who recorded the occurrence?  
-eventDate and recordedBy help establish data quality and traceability.  
+7.Does the dataset include the date and who recorded the occurrence?  
+  -eventDate and recordedBy help establish data quality and traceability.  
 
-Does it include any other accuracy elements?  
-One example would be coordinatePrecision.  
+8.Does it include any other accuracy elements?  
+  -One example would be coordinatePrecision.  
 
 Is there an issue field with comments about potential location problems?  
 GBIF’s issue field flags data quality problems such as invalid coordinates or mismatched locality.  
@@ -100,58 +99,61 @@ Consider whether the dataset would create misleading or incorrect spatial patter
 
 # Metadata and Visualization
 
-One of the core challenges is the semantic gap between how humans and computers understand map content. Humans can interpret a high-level theme from visual cues or context, while computers rely entirely on structured metadata. As a result, a map may be technically published yet still remain undiscoverable if its metadata does not accurately describe its thematic content (Hu et al., 2016). For example, a map might be named after a region although it actually displays a particular wildlife variable, or the service abstract may contain complete technical metadata but offer no meaningful description of what is shown visually. These situations make it difficult for both humans and systems to determine whether the map is appropriate for a given purpose.
-
-Metadata aplays an interpretive role in visualization. Thematic maps frequently include legends, symbols, or color ramps that explain what each visual element means — this is itself a form of metadata, because without it the viewer would have no way to interpret the underlying information (Comenetz, 2004).
+Metadata plays an interpretive role in visualization. Thematic maps frequently include legends, symbols, or color ramps that explain what each visual element means; this is itself a form of metadata, because without it the viewer would have no way to interpret the underlying information (Comenetz, 2004).
 
 You see this map:
 
-![Map Placeholder](/mnt/data/metadata%20final%20project.pdf)
+![Map without metadata](assets/Screenshot%20(239).png)
 
-By looking at the map, you might be able to guess the general location if you are familiar with Vancouver, British Columbia. You may recognize Jericho Park or the shoreline, and you might even infer roughly where the data points are located. But you still have no idea what the points represent. Are they showing rabbits? Bird sightings? Pollution levels? Tree species? Visitor counts? Without context, the vector data could represent anything.
+By looking at the map, you might be able to guess the general location if you are familiar with Vancouver, British Columbia. But you still have no idea what the points represent.  
+Are they showing rabbits? Bird sightings? Tree species? Without context, the vector data could represent anything.
 
-This is exactly why metadata is essential. Without metadata to explain the theme, purpose, and meaning of the visualization, the map is neither usable nor discoverable. Users cannot find it through search because nothing in the metadata tells them what it contains. And even if they do stumble across it, they cannot interpret what the points mean, how the data were collected, or whether the map is fit for their intended use.
-
-However, if we add a legend to the map, it immediately helps the user understand what the points represent. A legend is considered a type of metadata because it provides information about the data on the map—specifically, how to interpret the symbols, colors, or categories being displayed.
-
-Now that we know what the points are and where the data is located, the map becomes more interpretable. But even with a legend, there is still critical metadata missing that is not shown visually. Without additional information—such as the data source, date of collection, purpose of the map, geographic extent, or the method used to collect the observations—the map is not fully usable. Users still cannot determine whether the map is reliable, current, or fit for their intended use.
-
-You have now added more important metadata elements to the map to help users understand it. By including a north arrow, users can immediately interpret the directionality of the map. Adding a scale bar also helps users understand distance—allowing them to judge how far apart the points are and how those points relate to surrounding geographic features. These additions make the map far more interpretable and useful.
-
-However, even though the map is starting to make more sense visually, there is still additional information a user might need to determine whether the map is truly useful for their information need. Visual metadata like legends, north arrows, and scale bars help with interpretation, but they do not explain where the data came from, when it was collected, how accurate the coordinates are, or what the overall purpose of the map is. Without this deeper descriptive metadata, the map may still not be fully usable, trustworthy, or fit for use.
-
-Now I have added the name of the creator and the date of creation, which provide essential context for making the map usable. This information allows users to understand who created the map and when it was produced, both of which are crucial for assessing whether the map is trustworthy, up to date, and fit for their intended use. Provenance—knowing the source and the creation date—helps users evaluate the map’s credibility and decide whether it meets the requirements of their project or research question.
+This is precisely why metadata is essential. Without metadata to explain the visualization's meaning, the map is neither usable nor discoverable. Users cannot find it through search because the metadata doesn't indicate what it contains. Even if they stumble across it, they cannot interpret the points or determine whether the map is fit for their intended use (Hewlett, 2022).
 
 ---
 
-# Your Turn: Naming and Describing the Vector Points
+![Map with legend](assets/Screenshot%20(240).png)
 
-Below is a map with very limited metadata. You can see that the intention is to represent sightings across two different time periods, but without clear metadata, the meaning of the points is unclear. Using the dataset provided, answer the following questions:
+However, adding a legend to the map immediately helps the user understand what the points represent. A legend is considered a type of metadata because it provides information about the data on the maps, specifically, how to interpret the symbols, colors, or categories being displayed (Comenetz, 2004).
 
-### 1. What metadata would you use to name the vector points in the legend?
+Now that we know the points and where the data are located, the map becomes more interpretable. But even with a legend, critical metadata is still missing. Without additional information, such as a tool to help interrupt geographic location, the map is not fully usable.
 
-Think about which fields in the dataset best describe the time period represented by each point. Metadata elements to consider include:
+---
 
-- year  
-- eventDate  
-- dateIdentified  
+![Map with north arrow and scale bar](assets/Screenshot%20(241).png)
 
-Choose the elements that most clearly communicate how the sightings are grouped by time.
+By including a north arrow, users can immediately interpret the map's direction. Adding a scale bar also helps users understand distance allowing them to judge how far apart the points are and how those points relate to surrounding geographic features. These additions make the map far more interpretable and useful (Hewlett, 2022).
 
-### 2. Based on the dataset, what would you name the layer?
+However, even though the map is starting to make more sense visually, there is still additional information a user might need to determine whether it is helpful for their information need. Visual metadata, such as legends, north arrows, and scale bars, helps interpretation, but it does not explain where the data came from, when it was collected, how accurate the coordinates are, or the map's overall purpose.
 
-Write a clear and descriptive layer name that reflects:
+---
 
-- the species represented  
-- the location  
-- the time period  
-- the type of data  
+![Map with creator and date](assets/Screenshot%20(242).png)
 
-Your goal is to create a name that helps future users understand exactly what the layer contains.
+I have now added the creator's name and the date of creation, which are crucial for assessing whether the map is trustworthy, up to date, and fit for its intended use (Comenetz, 2004).
 
-### 3. What other types of metadata should be added to this map?
+---
 
-Consider what information a user would need to determine whether the map is interpretable, trustworthy, and fit for use.
+## Activity: Naming and Describing the Vector Points
+
+Below is a map with minimal metadata. You can see that the intention is to represent sightings across two different time periods, but without explicit metadata, the meaning of the points is unclear. Using the dataset provided, answer the following questions:
+
+![Activity map](assets/Screenshot%20(277).png)
+
+1. What metadata would you use to help name the vector points in the legend?
+
+2. Based on the dataset, what would you name the map?  
+   Write a clear and descriptive layer name that reflects:
+   - the species represented  
+   - the location  
+   - the time period  
+   - the type of data  
+
+   Your goal is to create a name that helps future users understand exactly what the layer contains.
+
+3. What other types of metadata should be added to this map? 
+   -Consider what information a user would need to determine whether the map is interpretable, trustworthy, and fit for use.
+
 # Tags
 
 When you create a map and want to upload it to the web for others to use, you once again need to consider how metadata will influence whether people can discover and understand it. One common platform for publishing maps is ArcGIS Online, which offers a free public account that allows individuals to share maps in ArcGIS’s repository. ArcGIS supports several approaches that creators can use to organize their content and improve the discoverability of their published maps (Create, Upload, or Add Content—ArcGIS Enterprise Sites | Documentation for ArcGIS Enterprise, n.d.).
