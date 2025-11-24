@@ -28,7 +28,7 @@ For biodiversity data, the most widely used metadata standard is Darwin Core. It
 
 Darwin Core is often used to describe information about taxa, their occurrences, and events associated with those occurrences. One of its key categories is the location class, which documents where an observation or specimen was recorded (Darwin Core, n.d.). These location-related elements allow geospatial professionals to use Darwin Core datasets to create maps that represent biodiversity patterns across space and time. However, these elements are not always implemented correctly or consistently, which can lead to problems with georeferencing accuracy and ultimately reduce the accuracy of the resulting maps (Chapman & Wieczorek, 2020).
 
-# Georeferencing in Dawrin core 
+# Accessing Datasets
 
 ![Map of rabbit observations](assets/Screenshot%20%28242%29.png)
 
