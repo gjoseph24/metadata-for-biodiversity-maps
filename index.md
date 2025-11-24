@@ -61,40 +61,40 @@ Using the guiding questions below, examine each dataset and determine whether th
 
 Use these questions to evaluate each dataset:
 
-1. Does the dataset include decimalLatitude and decimalLongitude?  
-    -If no, the dataset cannot be used for mapping.  
+1. Does the dataset include decimalLatitude and decimalLongitude?
+       -If no, the dataset cannot be used for mapping.  
 
-2.Does it include the country and state/province where the occurrence happened?  
-   -Missing administrative information makes it hard to confirm accuracy.  
+2. Does it include the country and state/province where the occurrence happened?  
+       -Missing administrative information makes it hard to confirm accuracy.  
 
 3. Does it include a locality description?  
-   -Locality provides important context for verifying the coordinates.  
+       -Locality provides important context for verifying the coordinates.  
 
 4. Does the locality match the latitude and longitude?  
-    -Compare textual locality with coordinates to detect mismatches.  
+       -Compare textual locality with coordinates to detect mismatches.  
 
-5.Is coordinateUncertaintyInMeters included?  
-    -High values may limit the usefulness of the data.  
+5. Is coordinateUncertaintyInMeters included?  
+       -High values may limit the usefulness of the data.  
 
-6.Are there records with a value of 0 in coordinateUncertaintyInMeters?  
-    -A value of 0 is never valid in Darwin Core and suggests missing or unreliable uncertainty information.  
+6. Are there records with a value of 0 in coordinateUncertaintyInMeters?  
+       -A value of 0 is never valid in Darwin Core and suggests missing or unreliable uncertainty information.  
 
-7.Does the dataset include the date and who recorded the occurrence?  
-  -eventDate and recordedBy help establish data quality and traceability.  
+7. Does the dataset include the date and who recorded the occurrence?  
+       -eventDate and recordedBy help establish data quality and traceability.  
 
-8.Does it include any other accuracy elements?  
-  -One example would be coordinatePrecision.  
+8. Does it include any other accuracy elements?  
+       -One example would be coordinatePrecision.  
 
-Is there an issue field with comments about potential location problems?  
-GBIF’s issue field flags data quality problems such as invalid coordinates or mismatched locality.  
+9. Is there an issue field with comments about potential location problems?  
+       -GBIF’s issue field flags data quality problems such as invalid coordinates or mismatched locality.  
 
-Which fields are left blank?  
-Missing fields may indicate poor documentation or unreliable spatial data.  
+10. Which fields are left blank?  
+    -Missing fields may indicate poor documentation or unreliable spatial data.  
 
-How does missing data in fields such as, coordinatePrecision impact the validity of the map you want to create?  
+11. How does missing data in fields such as, coordinatePrecision impact the validity of the map you want to create?  
 
-How do the documented issues affect the accuracy of the mapped locations?  
-Consider whether the dataset would create misleading or incorrect spatial patterns.
+12. How do the documented issues affect the accuracy of the mapped locations?  
+    -Consider whether the dataset would create misleading or incorrect spatial patterns.
 
 # Metadata and Visualization
 
@@ -169,28 +169,28 @@ Choosing effective tags is critical for improving discoverability. Start by iden
 
 ---
 
-# Additional Questions to Consider When Creating Tags
+# Activity: Creating Tags
 
-What information is already available on the map?  
-Before choosing tags, identify what information the map already displays through text, labels, or metadata. Any words that appear on the map itself, including the title, legend labels, species names, place names, or other written elements, will automatically be indexed by ArcGIS and included in search results. Because these terms are already searchable, you do not need to repeat them as tags.
+1. What information is already available on the map?  
+    -Before choosing tags, identify what information the map already displays through text, labels, or metadata. Any words that appear on the map itself, including the title, legend labels, species names, place names, or other written elements, will automatically be indexed by ArcGIS and included in search results. Because these terms are already searchable, you do not need to repeat them as tags.
 
-How might different audiences search for this map?  
-Think about researchers or casual users. Each group may use different search terms or levels of technical language.
+2. How might different audiences search for this map?  
+    -Think about researchers or casual users. Each group may use different search terms or levels of technical language.
 
-Where did the dataset for the map come from?  
-Dataset sources often contain standardized terms or community-specific vocabulary that you can reuse.
+3. Where did the dataset for the map come from?  
+    -Dataset sources often contain standardized terms or community-specific vocabulary that you can reuse.
 
-What is the primary message or purpose of this map?  
-Is it showing population, distribution, habitat use, wild vs. domestic presence, or another theme?
+4. What is the primary message or purpose of this map?  
+    -Is it showing population, distribution, habitat use, wild vs. domestic presence, or another theme?
 
-Are there standardized vocabulary terms from Darwin Core or Library of Congress Subject Headings (LCSH) that you can use?  
-Using controlled terms supports consistent description and improves discoverability across systems.
+5. Are there standardized vocabulary terms from Darwin Core or Library of Congress Subject Headings (LCSH) that you can use?  
+    -Using controlled terms supports consistent description and improves discoverability across systems.
 
-Which controlled vocabulary lists or codes could you use to describe the geographic location referenced in the map?  
-Examples include ISO 3166 country/province codes or Getty Thesaurus of Geographic Names place names.
+6. Which controlled vocabulary lists or codes could you use to describe the geographic location referenced in the map?  
+    -Examples include ISO 3166 country/province codes or Getty Thesaurus of Geographic Names place names.
 
-What synonyms or everyday terms might users use instead of controlled vocabulary?  
-Consider common names, informal expressions, or casual phrases someone might use.
+7. What synonyms or everyday terms might users use instead of controlled vocabulary?  
+    -Consider common names, informal expressions, or casual phrases someone might use.
 
 Using these prompts, create a list of 5–10 tags that would help different types of users find this map.
 
@@ -202,7 +202,7 @@ Chapman, A., & Wieczorek, J. (2020). *Georeferencing Best Practices.* https://do
 
 Comenetz, J. (2004). *Visualizing Metadata: Design Principles for Thematic Maps.* Cartographic Perspectives, 49, 10–21. https://doi.org/10.14714/CP49.438
 
-*Content categories—ArcGIS Online Help | Documentation.* (n.d.). Retrieved November 22, 2025, from https://doc.arcgis.com/en/arcgis-online/reference/content-categories.htm
+*Content categories—ArcGIS Online Help.* (n.d.). Retrieved November 22, 2025, from https://doc.arcgis.com/en/arcgis-online/reference/content-categories.htm
 
 Brodeur, J., Coetzee, S., Danko, D., Garcia, S., & Hjelmager, J. (2019). *Geographic Information Metadata—An Outlook from the International Standardization Perspective.* ISPRS International Journal of Geo-Information, 8(6), 280. https://doi.org/10.3390/ijgi8060280
 
