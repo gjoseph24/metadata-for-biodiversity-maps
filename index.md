@@ -1,4 +1,4 @@
-![Location map of Vancouver, Canada](assets/Frame 1 (4).png)
+![Project title slide](assets/Frame%201%20%284%29.png)
 
 # Introduction
 
