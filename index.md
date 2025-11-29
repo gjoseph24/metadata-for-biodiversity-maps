@@ -186,6 +186,7 @@ Choosing effective tags is critical for improving discoverability. Start by iden
 ---
 
 ![Map of Rabbits in Jericho Park](assets/Screenshot%20%28242%29.png)
+[Download: inatrulist_rabbits.xls](datasets/inatrulist_rabbits.xls)
 
 ---
 
