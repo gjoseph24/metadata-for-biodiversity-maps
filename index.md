@@ -1,4 +1,4 @@
-![Location map of Vancouver, Canada](assets/Location_map_Canada_Vancouver.png)
+![Location map of Vancouver, Canada](assets/Frame 1 (4).png)
 
 # Introduction
 
