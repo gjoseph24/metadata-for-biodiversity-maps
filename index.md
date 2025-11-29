@@ -36,6 +36,8 @@ In response to this need, the ISO Technical Committee 211 was established in 199
 ---
 
 # Introduction to Darwin Core
+![Frame 2 graphic](assets/Frame%202.png)
+
 
 Imagine you need to find a map showing Spotted Towhee populations in British Columbia. Using the ISO 19115 metadata standard to help guide your search would help you locate maps related to that geographic region and possibly return some thematic keywords. However, if you search using terms that the map’s creator did not include in their metadata, you will likely struggle to find it. Even if you locate the map, you might discover that metadata fields were used inconsistently or that no metadata standard or controlled vocabulary was applied at all, making it difficult to evaluate whether the map is fit for use. This is why geographic information professionals need to be familiar not only with ISO 19115 but also with complementary standards that describe the thematic content of maps.
 
