@@ -1,4 +1,16 @@
 ![Project title slide](assets/Frame%201%20%284%29.png)
+<nav>
+[Home](index.md) |
+[Introduction](01-introduction.md) |
+[ISO 19115](02-iso19115.md) |
+[Darwin Core](03-darwin-core.md) |
+[Accessing Datasets](accessing-datasets.md) |
+[Metadata & Visualization](metadata-visualization.md) |
+[Tags](tags.md) |
+[References](references.md)
+</nav>
+
+---
 
 # Introduction
 
