@@ -1,13 +1,13 @@
 ![Project title slide](assets/Frame%201%20%284%29.png)
-<nav>
-[Home](index.md) |
-[Introduction](01-introduction.md) |
-[ISO 19115](02-iso19115.md) |
-[Darwin Core](03-darwin-core.md) |
-[Accessing Datasets](accessing-datasets.md) |
-[Metadata & Visualization](metadata-visualization.md) |
-[Tags](tags.md) |
-[References](references.md)
+<nav style="font-size: 1.05rem; margin-bottom: 1.5em;">
+  <a href="index.md">Home</a> |
+  <a href="01-introduction.md">Introduction</a> |
+  <a href="02-iso19115.md">ISO 19115</a> |
+  <a href="03-darwin-core.md">Darwin Core</a> |
+  <a href="accessing-datasets.md">Accessing Datasets</a> |
+  <a href="metadata-visualization.md">Metadata & Visualization</a> |
+  <a href="tags.md">Tags</a> |
+  <a href="references.md">References</a>
 </nav>
 
 ---
