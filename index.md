@@ -1,3 +1,5 @@
+![Location map of Vancouver, Canada](assets/Location_map_Canada_Vancouver.png)
+
 # Introduction
 
 With the partnership between GBIF and ArcGis it is now easier than ever for mapmakers to create maps that illustrate a wide variety of biodiversity issues, including population trends, habitat ranges, and species distribution (“Download GBIF Species Occurrence Data in ArcGIS Pro,” n.d.). However, several challenges arise when using these datasets to create usable, discoverable maps. Common issues include limited or inconsistent geographic metadata and the need to implement multiple standards to ensure that the resulting map is both fit for use and findable. Metadata also offers valuable ways that mapmap can improve their resources to make them both usable and discoverable.
