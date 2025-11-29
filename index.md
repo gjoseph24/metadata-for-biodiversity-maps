@@ -153,6 +153,9 @@ I have now added the creator's name and the date of creation, which are crucial 
 Below is a map with minimal metadata. You can see that the intention is to represent sightings across two different time periods, but without explicit metadata, the meaning of the points is unclear. Using the dataset provided, answer the following questions:
 
 ![Activity map](assets/Screenshot%20(277).png)
+**Dataset: Castor canadensis (iNaturalist)**  
+[Download here](datasets/Castor%20canadensis%20inaturalist.xls)
+
 
 1. What metadata would you use to help name the vector points in the legend?
 
