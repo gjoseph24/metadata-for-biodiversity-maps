@@ -206,7 +206,9 @@ ArcGIS recommends beginning with Content Categories. If you belong to an organiz
 
 Although categories provide helpful high-level organization, they cannot fully capture the “aboutness” of every individual map. To supplement this, ArcGIS allows creators to add tags, also known as keywords, that help users discover maps during searches. When people search for a map, they typically think of words or phrases that describe the resource they want. ArcGIS automatically scans map titles, descriptions, and attributes for these terms. This means that if a word already appears in your map’s metadata or attribute table, ArcGIS can find it without you needing to add that exact word as a tag. Instead, you should use tags that introduce additional, relevant terms not already present elsewhere in your metadata (“Use Tags Effectively,” n.d.).
 
+
 ![Screenshot](assets/Screenshot%202025-11-30%20114952.png)
+
 To explore available maps on ArcGIS related to wildlife distribution, I began by searching the keyword “wildlife” in the platform’s search bar. ArcGIS returned a wide range of maps because the search engine looks for the keyword across multiple fields, including the item’s description, the map layers, and the associated tags. One example I found was Critical Habitat for Threatened and Endangered Species by Esri Federal Data (2025), which uses the tag “wildlife” to increase the dataset’s discoverability. Many of the other maps contained the word “wildlife” in their descriptions or included it within a tag phrase such as “US Fish & Wildlife.” This map helps illustrate how metadata elements, especially tags, play a crucial role in helping users find relevant geospatial datasets.
 
 
