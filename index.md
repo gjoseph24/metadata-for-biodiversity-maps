@@ -128,7 +128,8 @@ This is precisely why metadata is essential. Without metadata to explain the vis
 
 ---
 
-![Map with legend](assets/Screenshot%20(240).png)
+
+![Legend showing data categories](assets/correctlegend.png)
 
 However, adding a legend to the map immediately helps the user understand what the points represent. A legend is considered a type of metadata because it provides information about the data on the maps, specifically, how to interpret the symbols, colors, or categories being displayed (Comenetz, 2004).
 
@@ -136,7 +137,7 @@ Now that we know the points and where the data are located, the map becomes more
 
 ---
 
-![Map with north arrow and scale bar](assets/Screenshot%20(241).png)
+![Correct symbol design](assets/correctsymbols.png)
 
 By including a north arrow, users can immediately interpret the map's direction. Adding a scale bar also helps users understand distance allowing them to judge how far apart the points are and how those points relate to surrounding geographic features. These additions make the map far more interpretable and useful (Hewlett, 2022).
 
@@ -144,7 +145,7 @@ However, even though the map is starting to make more sense visually, there is s
 
 ---
 
-![Map with creator and date](assets/Screenshot%20(242).png)
+![Final corrected map with all metadata components](assets/correct%20everything.png)
 
 I have now added the creator's name and the date of creation, which are crucial for assessing whether the map is trustworthy, up to date, and fit for its intended use (Comenetz, 2004).
 
