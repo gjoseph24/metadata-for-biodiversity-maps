@@ -256,7 +256,7 @@ Chapman, A., & Wieczorek, J. (2020). Georeferencing Best Practices. https://doi.
 
 Comenetz, J. (2004). Visualizing Metadata: Design Principles for Thematic Maps. Cartographic Perspectives, 49, 10–21. https://doi.org/10.14714/CP49.438
 
-Content categories—ArcGIS Online Help | Documentation. (n.d.). Retrieved November 22, 2025, from https://doc.arcgis.com/en/arcgis-online/reference/content-categories.htm
+Content categories—ArcGIS Online Help, Documentation. (n.d.). Retrieved November 22, 2025, from https://doc.arcgis.com/en/arcgis-online/reference/content-categories.htm
 
 Blofeld, S. taken by D. (2013). English: Map of Vancouver [Graphic]. http://www.maps-for-free.com/ using Open Street Map data. https://commons.wikimedia.org/wiki/File:Location_map_Canada_Vancouver.png
 
