@@ -47,20 +47,44 @@ Darwin Core is often used to describe information about taxa, their occurrences,
 
 # Accessing Datasets
 
-![Map of rabbit observations](assets/Screenshot%20%28242%29.png)
+![Final corrected map with all metadata components](assets/correct%20everything.png)
 
-Let’s take a look at this map. We see that the vector points in the map have been given geographic locations, yet by looking at the map alone, we don’t know how these points were determined. This is where metadata comes in; it helps us understand how these points were created and determine whether the map is fit for use. Deciding whether a dataset  is fit for use is a critical part of making high quality maps.
+I created this map to explore the question: How has the release of domestic bunnies into Jericho Park impacted the population of wild rabbits?  
+To investigate this, I used an iNaturalist dataset imported through GBIF, which allowed me to narrow the data by species (rabbits) and by location (Jericho Park). Based on these filters, the dataset initially appeared to be a good fit for answering my research question.
 
-![Excerpt of occurrence table](assets/Screenshot%20%28244%29.png)
+However, once I generated the map, I noticed some issues. For example, one of the vector points appears in the middle of the ocean, which would be a very unlikely place to find a rabbit.
 
-From the data, we can see that these vector points are defined by longitude and latitude coordinates. However, there is an issue; minimal metadata describes the location where the occurrence took place. Chapman & Wieczorek ( 2020) argues that no matter how specific a location appears, every location has an associated uncertainty. Coordinates without a carefully determined uncertainty value should not be considered proper georeferences; they are simply coordinates with unclear meaning.
-We can see that some uncertainty information has been filled in, but there are still many null values. Additionally, most of the other geographic metadata fields are missing. For georeference metadata to be considered accurate, it must be detailed. For instance, it is important to provide a descriptive locality, even when coordinates are included. The locality description should be specific and accurate leaving no room for multiple interpretations. By omitting these metadata fields, key contextual information is lost, limiting the ability to create a rich and precise map (Chapman & Wieczorek, 2020).
-Darwin Core provides many fields that help make georeferencing metadata more complete, such as dwc:georeferenceVerificationStatus, as well as associated fields like dwc:georeferencedBy and dwc:georeferencedDate (Darwin Core, n.d.).
+![Map screenshot](assets/Screenshot%202025-11-28%20192525.png)
 
-![GBIF issue flags screenshot](assets/Screenshot%20%28243%29.png)
+If I had reviewed the dataset before making my map, I could have used the metadata to understand how the coordinates were generated and to determine whether the data were actually suitable for my intended use. Assessing whether a dataset is “fit for use” through metadata is a key part of producing high-quality maps, because inaccurate or poorly georeferenced points can significantly affect your interpretations.
 
-During indexation, GBIF adds an issue field to help address a common data quality issue. We can see several issue codes related to georeferencing accuracy. For instance, Coordinate_Rounded indicates that the original coordinates were rounded during data interpretation, meaning the recorded latitude and longitude values may lack precision. The continent-derived-from-coordinates flag shows that the value in the dwc:continent field (or the interpreted continent) was not explicitly provided by the original recorder, but was instead inferred automatically from the latitude and longitude values (Occurrence Issues and Flags :: Technical Documentation, n.d.).
+---
+
+![Screenshot](assets/Screenshot%20(244).png)
+
+From the data, we can see that these vector points are defined by longitude and latitude coordinates. However, there is an issue; minimal metadata describes the location where the occurrence took place. Chapman & Wieczorek (2020) argue that no matter how specific a location appears, every location has an associated uncertainty. Coordinates without a carefully determined uncertainty value should not be considered proper georeferences; they are simply coordinates with unclear meaning.
+
+We can see that some Coordinate uncertainty fields have been filled in, but there are still many null values. Coordinate uncertainty is a measure of the minimum distance on the surface of the Earth within which a locality might actually fall. This element highlights that the coordinates are not precise. Additionally, most of the other geographic metadata fields are missing. For georeference metadata to be considered accurate, it must be detailed. For instance, it is important to provide a descriptive locality, even when coordinates are included. The locality description should be specific and accurate, leaving no room for multiple interpretations. By omitting these metadata fields, key contextual information is lost, limiting the ability to create a rich and precise map (Chapman & Wieczorek, 2020).
+
+![Screenshot](assets/Screenshot%202025-11-28%20192400.png)
+
+The red-underlined fields shown above are the coordinates for the vector point that appeared in the ocean. Looking at the coordinate uncertainty, we can see it is fairly high compared to some of the other coordinates, which helps explain how the point may have ended up in the water.
+
+Darwin Core also provides many fields that help make georeferencing metadata more complete, such as dwc:georeferenceVerificationStatus, as well as associated fields like dwc:georeferencedBy and dwc:georeferencedDate (Darwin Core, n.d.).
+
+---
+
+![Screenshot](assets/Screenshot%20(243).png)
+
+During indexation, GBIF adds an issue field to help address a common data quality issue. We can see several issue codes related to georeferencing accuracy. The *continent-derived-from-coordinates* flag shows that the value in the dwc:continent field (or the interpreted continent) was not explicitly provided by the original recorder, but was instead inferred automatically from the latitude and longitude values (Occurrence Issues and Flags: Technical Documentation, n.d.).
+
 It is important to note that this dataset was collected through iNaturalist, a platform that relies on community scientists to collect biodiversity observations using their smartphones. While smartphones are generally accurate, their GPS precision can decrease near buildings, bridges, dense vegetation, and other obstructions. As a result, some degree of spatial uncertainty should be expected, and careful review of related georeferencing metadata is necessary (Chapman & Wieczorek, 2020).
+
+![Screenshot](assets/Screenshot%20(294).png)
+
+As discussed in the Darwin Core introduction, before Darwin Core there was no standardized way to record biodiversity data. Although these standards help ensure data quality, when information comes from multiple observers, there is always a risk of misidentifying an organism. Given the rabbit example, how can we be confident that an observer truly saw a domestic rabbit rather than a wild rabbit with domestic lineage?
+
+One way to verify this is by checking the photo taken at the time of observation. If you click on the occurrenceID field, the iNaturalist link will take you directly to the images associated with that observation. Reviewing these images allows you to confirm whether the correct standardized vocabulary has been applied.
 
 ---
 
