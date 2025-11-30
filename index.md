@@ -250,42 +250,56 @@ Using these prompts, create a list of 5–10 tags that would help different type
 
 # References
 
-Ahonen-Rainio, P. (2006). *Metadata for Geographic Information.* Journal of Map & Geography Libraries, 2(1), 37–66. https://doi.org/10.1300/J230v02n01_03
+Ahonen-Rainio, P. (2006). Metadata for Geographic Information. Journal of Map & Geography Libraries, 2(1), 37–66. https://doi.org/10.1300/J230v02n01_03
 
-Chapman, A., & Wieczorek, J. (2020). *Georeferencing Best Practices.* https://doi.org/10.15468/DOC-GG7H-S853
+Chapman, A., & Wieczorek, J. (2020). Georeferencing Best Practices. https://doi.org/10.15468/DOC-GG7H-S853
 
-Comenetz, J. (2004). *Visualizing Metadata: Design Principles for Thematic Maps.* Cartographic Perspectives, 49, 10–21. https://doi.org/10.14714/CP49.438
+Comenetz, J. (2004). Visualizing Metadata: Design Principles for Thematic Maps. Cartographic Perspectives, 49, 10–21. https://doi.org/10.14714/CP49.438
 
-*Content categories—ArcGIS Online Help.* (n.d.). Retrieved November 22, 2025, from https://doc.arcgis.com/en/arcgis-online/reference/content-categories.htm
+Content categories—ArcGIS Online Help | Documentation. (n.d.). Retrieved November 22, 2025, from https://doc.arcgis.com/en/arcgis-online/reference/content-categories.htm
 
-Brodeur, J., Coetzee, S., Danko, D., Garcia, S., & Hjelmager, J. (2019). *Geographic Information Metadata—An Outlook from the International Standardization Perspective.* ISPRS International Journal of Geo-Information, 8(6), 280. https://doi.org/10.3390/ijgi8060280
+Blofeld, S. taken by D. (2013). English: Map of Vancouver [Graphic]. http://www.maps-for-free.com/ using Open Street Map data. https://commons.wikimedia.org/wiki/File:Location_map_Canada_Vancouver.png
 
-*Darwin Core.* (n.d.). Retrieved September 20, 2025, from https://dwc.tdwg.org/
+Brodeur, J., Coetzee, S., Danko, D., Garcia, S., & Hjelmager, J. (2019). Geographic Information Metadata—An Outlook from the International Standardization Perspective. ISPRS International Journal of Geo-Information, 8(6), 280. https://doi.org/10.3390/ijgi8060280
 
-*Occurrence issues and flags: Technical Documentation.* (n.d.). Retrieved November 22, 2025, from https://techdocs.gbif.org/en/data-use/occurrence-issues-and-flags
+Darwin Core. (n.d.). Retrieved September 20, 2025, from https://dwc.tdwg.org/
+Occurrence issues and flags: Technical Documentation. (n.d.). Retrieved November 22, 2025, from https://techdocs.gbif.org/en/data-use/occurrence-issues-and-flags
 
-*Download GBIF Species Occurrence Data in ArcGIS Pro.* (n.d.). ArcGIS Blog. Retrieved November 22, 2025, from https://www.esri.com/arcgis-blog/products/arcgis-living-atlas/mapping/download-gbif-species-occurrence-data-in-arcgis-pro
+Download GBIF Species Occurrence Data in ArcGIS Pro. (n.d.). ArcGIS Blog. Retrieved November 22, 2025, from https://www.esri.com/arcgis-blog/products/arcgis-living-atlas/mapping/download-gbif-species-occurrence-data-in-arcgis-pro
+Critical Habitat for Threatened and Endangered Species—Overview. (n.d.). Retrieved November 30, 2025, from https://www.arcgis.com/home/item.html?id=9d0965dae6a64f38b1af80c2f7ea2efe
 
-*Getty Thesaurus of Geographic Names (Getty Research Institute).* (n.d.). Retrieved November 20, 2025, from https://www.getty.edu/research/tools/vocabularies/tgn/index.html
+GBIF.org (2 October 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.zpferc
 
-Gordon, S., & Habermann, T. (2018). *The influence of community recommendations on metadata completeness.* Ecological Informatics, 43, 38–51. https://doi.org/10.1016/j.ecoinf.2017.09.005
+GBIF.org (18 November 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.5uhknj
 
-Hewlett, R. (Director). (2022, February 17). *Metadata in QGIS* [Video recording]. https://www.youtube.com/watch?v=6OIYGWOpYQY
+GBIF.org (18 November 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.ywk4d6
 
-*Use tags effectively.* (n.d.). ArcGIS Blog. Retrieved November 22, 2025, from https://www.esri.com/arcgis-blog/products/arcgis-online/mapping/using-tags-effectively
+GBIF.org (18 November 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.jceb3g
 
-Hu, K., Gui, Z., Cheng, X., Qi, K., Zheng, J., You, L., & Wu, H. (2016). *Content-Based Discovery for Web Map Service using Support Vector Machine and User Relevance Feedback.* PLoS One, 11(11), e0166098. https://doi.org/10.1371/journal.pone.0166098
+GBIF.org (18 November 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.qdcph6
 
-*ISO - ISO 3166—Country Codes.* (n.d.). ISO. Retrieved November 20, 2025, from https://www.iso.org/iso-3166-country-codes.html
+GBIF.org (20 November 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.kggn9t
 
-Lafia, S., Turner, A., & Kuhn, W. (2018). *Improving Discovery of Open Civic Data.* https://doi.org/10.4230/LIPIcs.GISCIENCE.2018.9
+Getty Thesaurus of Geographic Names (Getty Research Institute). (n.d.). Retrieved November 20, 2025, from https://www.getty.edu/research/tools/vocabularies/tgn/index.html
 
-Mize, J., Milan, A., Ball, A., Fergusson, E., Martinolich, K., Jenkins, K., Wayne, L., Schweitzer, P., Herndon, P., & O’Connor, S. (2012). *ISO 19115-2 geographic information—Metadata Part 2: Extensions for imagery and gridded data workbook: Guide to implementing ISO 19115-2:2009(E), the North American Profile (NAP), and ISO 19110 feature catalogue.* National Oceanic and Atmospheric Administration.
+Gordon, S., & Habermann, T. (2018). The influence of community recommendations on metadata completeness. Ecological Informatics, 43, 38–51. https://doi.org/10.1016/j.ecoinf.2017.09.005
 
-*Subject Headings and Genre/Form Terms (Cataloging and Acquisitions at the Library of Congress).* (n.d.). Retrieved November 22, 2025, from https://www.loc.gov/aba/cataloging/subject/
+Hewlett, R. (Director). (2022, February 17). Metadata in QGIS [Video recording]. https://www.youtube.com/watch?v=6OIYGWOpYQY
+Use tags effectively. (n.d.). ArcGIS Blog. Retrieved November 22, 2025, from https://www.esri.com/arcgis-blog/products/arcgis-online/mapping/using-tags-effectively
 
-Wieczorek, J., Bloom, D., Guralnick, R., Blum, S., Döring, M., Giovanni, R., Robertson, T., & Vieglais, D. (2012). *Darwin Core: An Evolving Community-Developed Biodiversity Data Standard.* PLoS ONE, 7(1), e29715. https://doi.org/10.1371/journal.pone.0029715
+Hu, K., Gui, Z., Cheng, X., Qi, K., Zheng, J., You, L., & Wu, H. (2016). Content-Based Discovery for Web Map Service using Support Vector Machine and User Relevance Feedback. PLoS One, 11(11), e0166098. https://doi.org/10.1371/journal.pone.0166098
 
+Hum, V. (2024, October 22). Domestic Rabbit (Subspecies Oryctolagus cuniculus domesticus). iNaturalist; iNaturalist. https://www.inaturalist.org/observations/248668982
+
+ISO - ISO 3166—Country Codes. (n.d.). ISO. Retrieved November 20, 2025, from https://www.iso.org/iso-3166-country-codes.html
+
+Lafia, S., Turner, A., & Kuhn, W. (2018). Improving Discovery of Open Civic Data. https://doi.org/10.4230/LIPIcs.GISCIENCE.2018.9
+
+Mize, J., Milan, A., Ball, A., Fergusson, E., Martinolich, K., Jenkins, K., Wayne, L., Schweitzer, P., Herndon, P., & O’Connor, S. (2012). ISO 19115-2 geographic information—Metadata Part 2: Extensions for imagery and gridded data workbook: Guide to implementing ISO 19115-2:2009(E), the North American Profile (NAP), and ISO 19110 feature catalogue. National Oceanic and Atmospheric Administration.
+
+Subject Headings and Genre/Form Terms (Cataloging and Acquisitions at the Library of Congress). (n.d.). [Web page]. Retrieved November 22, 2025, from https://www.loc.gov/aba/cataloging/subject/
+
+Wieczorek, J., Bloom, D., Guralnick, R., Blum, S., Döring, M., Giovanni, R., Robertson, T., & Vieglais, D. (2012). Darwin Core: An Evolving Community-Developed Biodiversity Data Standard. PLoS ONE, 7(1), e29715. https://doi.org/10.1371/journal.pone.0029715
 
 
 
