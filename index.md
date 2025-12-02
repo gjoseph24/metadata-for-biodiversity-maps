@@ -15,7 +15,7 @@
 
 # Introduction
 
-With the partnership between GBIF and ArcGis it is now easier than ever for mapmakers to create maps that illustrate a wide variety of biodiversity issues, including population trends, habitat ranges, and species distribution (“Download GBIF Species Occurrence Data in ArcGIS Pro,” n.d.). However, several challenges arise when using these datasets to create usable, discoverable maps. Common issues include limited or inconsistent geographic metadata and the need to implement multiple standards to ensure that the resulting map is both fit for use and findable. Metadata also offers valuable ways that mapmap can improve their resources to make them both usable and discoverable.
+With the partnership between Global Biodiversity Information Facility (GBIF) and ArcGis it is now easier than ever for mapmakers to create maps that illustrate a wide variety of biodiversity issues, including population trends, habitat ranges, and species distribution (“Download GBIF Species Occurrence Data in ArcGIS Pro,” n.d.). However, several challenges arise when using these datasets to create usable, discoverable maps. Common issues include limited or inconsistent geographic metadata and the need to implement multiple standards to ensure that the resulting map is both fit for use and findable. Metadata also offers valuable ways for mapmakers to improve their resources, making them both usable and discoverable.
 
 Metadata is often defined as “data about data,” but in practice, it does much more, especially for maps. Metadata provides structured, well-defined context that enables discovery, interpretation, and reuse. It allows users to quickly understand what a map contains, where it applies, and whether it is suitable for their research question, even if they did not collect or create the dataset themselves (Gordon & Habermann, 2018).
 
@@ -87,7 +87,7 @@ As discussed in the Darwin Core introduction, before Darwin Core there was no st
 One way to verify this is by checking the photo taken at the time of observation. If you click on the occurrenceID field, the iNaturalist link will take you directly to the images associated with that observation. Reviewing these images allows you to confirm whether the correct standardized vocabulary has been applied.
 
 ---
-
+ [!IMPORTANT]
 ## Activity: Determine Which GBIF Datasets Are Fit for Use
 
 Datasets for this activity:
@@ -214,16 +214,13 @@ To explore available maps on ArcGIS related to wildlife distribution, I began by
 
 Choosing effective tags is critical for improving discoverability. Start by identifying the main purpose or message of your map: Is it about population? Species range? Biodiversity within a region? Once you identify the core components of your map, examine your dataset for attributes that represent these themes. Then select keywords that accurately describe these components and follow standardized terminology. Standardization is critical when working with biodiversity datasets, because it links your map to established vocabulary systems and helps users find your work across multiple platforms. For example, Darwin Core provides standardized terms that promote consistent description and discovery of biodiversity information (Darwin Core, n.d.). Another place to look for controlled vocabulary is the Library of Congress Subject Headings, a list of controlled vocabulary. While this is often used in library settings, it is a good place to check to see how resources are described so that you can easily link your map to concepts that are similar (Subject Headings and Genre/Form Terms (Cataloging and Acquisitions at the Library of Congress), n.d.). Also when creating tags it is important to think about your audience. Some people looking for your map might not be familiar with controlled vocabulary so they might use the nomenclature to describe the core concepts of a map. Which is why it is important to include related terms (Lafia et al., 2018). Another important thing to conside when creating tags it is also a good idea consulting to consult the ISO 3166 to get country codes and Getty Thesaurus of Geographic Names to obtain knowledge on controlled vocabulary for that region (Getty Thesaurus of Geographic Names (Getty Research Institute), n.d & ISO - ISO 3166 — Country Codes, n.d.). Using these standardized terms as tags or incorporating them into your metadata can significantly improve your map’s findability.
 
----
-
-![Map of Rabbits in Jericho Park](assets/Screenshot%20%28242%29.png)
-#### iNaturalist Rabbit Dataset
-[Click here to download the dataset](datasets/inatrulist_rabbits.xls)
-
 
 ---
 
 # Activity: Creating Tags
+![Map of Rabbits in Jericho Park](assets/Screenshot%20%28242%29.png)
+#### iNaturalist Rabbit Dataset
+[Click here to download the dataset](datasets/inatrulist_rabbits.xls)
 
 1. What information is already available on the map?  
     -Before choosing tags, identify what information the map already displays through text, labels, or metadata. Any words that appear on the map itself, including the title, legend labels, species names, place names, or other written elements, will automatically be indexed by ArcGIS and included in search results. Because these terms are already searchable, you do not need to repeat them as tags.
