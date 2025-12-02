@@ -87,7 +87,8 @@ As discussed in the Darwin Core introduction, before Darwin Core there was no st
 One way to verify this is by checking the photo taken at the time of observation. If you click on the occurrenceID field, the iNaturalist link will take you directly to the images associated with that observation. Reviewing these images allows you to confirm whether the correct standardized vocabulary has been applied.
 
 ---
- [!IMPORTANT]
+<div style="border: 2px solid #cccccc; border-radius: 10px; padding: 1rem; background-color: #f8f8f8; margin: 1.5rem 0;">
+
 ## Activity: Determine Which GBIF Datasets Are Fit for Use
 
 Datasets for this activity:
@@ -136,6 +137,8 @@ Use these questions to evaluate each dataset:
 
 12. How do the documented issues affect the accuracy of the mapped locations?  
     -Consider whether the dataset would create misleading or incorrect spatial patterns.
+ </div>
+
 
 # Metadata and Visualization
 
