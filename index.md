@@ -23,7 +23,7 @@ In recent years, the number of publicly available Web Map Services (WMS) has inc
 
 One of the core challenges is the semantic gap between how humans and computers understand map content. Humans can interpret a high-level theme from visual cues or context, while computers rely entirely on structured metadata. As a result, a map may be technically published yet still remain undiscoverable if its metadata does not accurately describe its thematic content (Hu et al., 2016). For example, a map might be named after a region although it actually displays a particular wildlife variable, or the service abstract may contain complete technical metadata but offer no meaningful description of what is shown visually. These situations make it difficult for both humans and systems to determine whether the map is appropriate for a given purpose.
 
-In this lesson, you will get an introduction to both geographic and biodiversity metadata standard, how to assess whether a biodiversity dataset has adequate georeferencing information, how to use Darwin Core to complement ISO 19115 by adding richer thematic descriptions, and how to apply tagging techniques that make your maps discoverable.
+In this lesson, you will get an introduction to both geographic and biodiversity metadata standards, how to assess whether a biodiversity dataset has adequate georeferencing information, how to use Darwin Core to complement ISO 19115 by adding richer thematic descriptions, and how to apply tagging techniques that make your maps discoverable.
 
 ---
 
@@ -39,7 +39,7 @@ In response to this need, the ISO Technical Committee 211 was established in 199
 ![Frame 2 graphic](assets/Frame%202.png)
 
 
-Imagine you need to find a map showing Spotted Towhee populations in British Columbia. Using the ISO 19115 metadata standard to help guide your search would help you locate maps related to that geographic region and possibly return some thematic keywords. However, if you search using terms that the map’s creator did not include in their metadata, you will likely struggle to find it. Even if you locate the map, you might discover that metadata fields were used inconsistently or that no metadata standard or controlled vocabulary was applied at all, making it difficult to evaluate whether the map is fit for use. This is why geographic information professionals need to be familiar not only with ISO 19115 but also with complementary standards that describe the thematic content of maps.
+Imagine you need to find a map showing released domestic rabbit populations in British Columbia. Using the ISO 19115 metadata standard to help guide your search would help you locate maps related to that geographic region and possibly return some thematic keywords. However, if you search using terms that the map’s creator did not include in their metadata, you will likely struggle to find it. Even if you locate the map, you might discover that metadata fields were used inconsistently or that no metadata standard or controlled vocabulary was applied at all, making it difficult to evaluate whether the map is fit for use. This is why geographic information professionals need to be familiar not only with ISO 19115 but also with complementary standards that describe the thematic content of maps.
 
 For biodiversity data, the most widely used metadata standard is Darwin Core. Its primary goal is to create a common language for describing biodiversity information. Achieving this is challenging because natural history collections and ecological datasets have traditionally been managed using local or institutional practices, leading to inconsistencies in how information is recorded (Wieczorek et al., 2012). Darwin Core addresses this challenge by providing a structured glossary of standardized terms, called elements. These elements facilitate the sharing and integration of biodiversity information across institutions and repositories (Darwin Core, n.d.).
 
@@ -52,7 +52,7 @@ Darwin Core is often used to describe information about taxa, their occurrences,
 I created this map to explore the question: How has the release of domestic bunnies into Jericho Park impacted the population of wild rabbits?  
 To investigate this, I used an iNaturalist dataset imported through GBIF, which allowed me to narrow the data by species (rabbits) and by location (Jericho Park). Based on these filters, the dataset initially appeared to be a good fit for answering my research question.
 
-However, once I generated the map, I noticed some issues. For example, one of the vector points appears in the middle of the ocean, which would be a very unlikely place to find a rabbit.
+However, once I generated the map, I noticed some issues. For example, one of the vector points lies in the middle of the ocean, which would be an unlikely place to find a rabbit.
 
 ![Map screenshot](assets/Screenshot%202025-11-28%20192525.png)
 
@@ -72,7 +72,6 @@ The red-underlined fields shown above are the coordinates for the vector point t
 
 Darwin Core also provides many fields that help make georeferencing metadata more complete, such as dwc:georeferenceVerificationStatus, as well as associated fields like dwc:georeferencedBy and dwc:georeferencedDate (Darwin Core, n.d.).
 
----
 
 ![Screenshot](assets/Screenshot%20(243).png)
 
@@ -82,14 +81,13 @@ It is important to note that this dataset was collected through iNaturalist, a p
 
 ![Screenshot](assets/Screenshot%20(294).png)
 
-As discussed in the Darwin Core introduction, before Darwin Core there was no standardized way to record biodiversity data. Although these standards help ensure data quality, when information comes from multiple observers, there is always a risk of misidentifying an organism. Given the rabbit example, how can we be confident that an observer truly saw a domestic rabbit rather than a wild rabbit with domestic lineage?
+As discussed in the Darwin Core introduction, before Darwin Core, there was no standardized way to record biodiversity data. Although these standards help ensure data quality, when information comes from multiple observers, there is always a risk of misidentifying an organism. Given the rabbit example, how can we be confident that an observer truly saw a domestic rabbit rather than a wild rabbit with domestic lineage?
 
 One way to verify this is by checking the photo taken at the time of observation. If you click on the occurrenceID field, the iNaturalist link will take you directly to the images associated with that observation. Reviewing these images allows you to confirm whether the correct standardized vocabulary has been applied.
 
 ---
-<div style="border: 2px solid #cccccc; border-radius: 10px; padding: 1rem; background-color: #f8f8f8; margin: 1.5rem 0;">
 
-<h2>Activity: Determine Which GBIF Datasets Are Fit for Use</h2>
+Activity: Determine Which GBIF Datasets Are Fit for Use</h2>
 
 Datasets for this activity:
 
@@ -138,8 +136,6 @@ Use these questions to evaluate each dataset:
 12. How do the documented issues affect the accuracy of the mapped locations?  
     - Consider whether the dataset would create misleading or incorrect spatial patterns.
 
-</div>
-
 
 
 # Metadata and Visualization
@@ -155,16 +151,12 @@ Are they showing rabbits? Bird sightings? Tree species? Without context, the vec
 
 This is precisely why metadata is essential. Without metadata to explain the visualization's meaning, the map is neither usable nor discoverable. Users cannot find it through search because the metadata doesn't indicate what it contains. Even if they stumble across it, they cannot interpret the points or determine whether the map is fit for their intended use (Hewlett, 2022).
 
----
-
-
 ![Legend showing data categories](assets/correctlegend.png)
 
 However, adding a legend to the map immediately helps the user understand what the points represent. A legend is considered a type of metadata because it provides information about the data on the maps, specifically, how to interpret the symbols, colors, or categories being displayed (Comenetz, 2004).
 
 Now that we know the points and where the data are located, the map becomes more interpretable. But even with a legend, critical metadata is still missing. Without additional information, such as a tool to help interrupt geographic location, the map is not fully usable.
 
----
 
 ![Correct symbol design](assets/correctsymbols.png)
 
@@ -172,7 +164,6 @@ By including a north arrow, users can immediately interpret the map's direction.
 
 However, even though the map is starting to make more sense visually, there is still additional information a user might need to determine whether it is helpful for their information need. Visual metadata, such as legends, north arrows, and scale bars, helps interpretation, but it does not explain where the data came from, when it was collected, how accurate the coordinates are, or the map's overall purpose.
 
----
 
 ![Final corrected map with all metadata components](assets/correct%20everything.png)
 
@@ -217,7 +208,7 @@ Although categories provide helpful high-level organization, they cannot fully c
 To explore available maps on ArcGIS related to wildlife distribution, I began by searching the keyword “wildlife” in the platform’s search bar. ArcGIS returned a wide range of maps because the search engine looks for the keyword across multiple fields, including the item’s description, the map layers, and the associated tags. One example I found was Critical Habitat for Threatened and Endangered Species by Esri Federal Data (2025), which uses the tag “wildlife” to increase the dataset’s discoverability. Many of the other maps contained the word “wildlife” in their descriptions or included it within a tag phrase such as “US Fish & Wildlife.” This map helps illustrate how metadata elements, especially tags, play a crucial role in helping users find relevant geospatial datasets.
 
 
-Choosing effective tags is critical for improving discoverability. Start by identifying the main purpose or message of your map: Is it about population? Species range? Biodiversity within a region? Once you identify the core components of your map, examine your dataset for attributes that represent these themes. Then select keywords that accurately describe these components and follow standardized terminology. Standardization is critical when working with biodiversity datasets, because it links your map to established vocabulary systems and helps users find your work across multiple platforms. For example, Darwin Core provides standardized terms that promote consistent description and discovery of biodiversity information (Darwin Core, n.d.). Another place to look for controlled vocabulary is the Library of Congress Subject Headings, a list of controlled vocabulary. While this is often used in library settings, it is a good place to check to see how resources are described so that you can easily link your map to concepts that are similar (Subject Headings and Genre/Form Terms (Cataloging and Acquisitions at the Library of Congress), n.d.). Also when creating tags it is important to think about your audience. Some people looking for your map might not be familiar with controlled vocabulary so they might use the nomenclature to describe the core concepts of a map. Which is why it is important to include related terms (Lafia et al., 2018). Another important thing to conside when creating tags it is also a good idea consulting to consult the ISO 3166 to get country codes and Getty Thesaurus of Geographic Names to obtain knowledge on controlled vocabulary for that region (Getty Thesaurus of Geographic Names (Getty Research Institute), n.d & ISO - ISO 3166 — Country Codes, n.d.). Using these standardized terms as tags or incorporating them into your metadata can significantly improve your map’s findability.
+Choosing effective tags is critical for improving discoverability. Start by identifying the main purpose or message of your map: Is it about population? Species range? Biodiversity within a region? Once you identify the core components of your map, examine your dataset for attributes that represent these themes. Then select keywords that accurately describe these components and follow standardized terminology. Standardization is critical when working with biodiversity datasets, because it links your map to established vocabulary systems and helps users find your work across multiple platforms. For example, Darwin Core provides standardized terms that promote consistent description and discovery of biodiversity information (Darwin Core, n.d.). Another place to look for controlled vocabulary is the Library of Congress Subject Headings, a list of controlled vocabulary. While this is often used in library settings, it is a good place to check to see how resources are described so that you can easily link your map to concepts that are similar (Subject Headings and Genre/Form Terms (Cataloging and Acquisitions at the Library of Congress), n.d.). Also, when creating tags, it is essential to think about your audience. Some people looking for your map might not be familiar with controlled vocabulary so they might use the nomenclature to describe the core concepts of a map, which is why it is important to include related terms (Lafia et al., 2018). Another important thing to consider when creating tags is that it is also a good idea to consult the ISO 3166 to get country codes and Getty Thesaurus of Geographic Names to obtain knowledge on controlled vocabulary for that region (Getty Thesaurus of Geographic Names (Getty Research Institute), n.d & ISO - ISO 3166 — Country Codes, n.d.). Using these standardized terms as tags or incorporating them into your metadata can significantly improve your map’s findability.
 
 
 ---
