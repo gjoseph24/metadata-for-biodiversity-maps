@@ -87,7 +87,7 @@ One way to verify this is by checking the photo taken at the time of observation
 
 ---
 
-Activity: Determine Which GBIF Datasets Are Fit for Use</h2>
+# Activity: Determine Which GBIF Datasets Are Fit for Use</h2>
 
 Datasets for this activity:
 
