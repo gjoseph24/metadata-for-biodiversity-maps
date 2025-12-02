@@ -89,7 +89,7 @@ One way to verify this is by checking the photo taken at the time of observation
 ---
 <div style="border: 2px solid #cccccc; border-radius: 10px; padding: 1rem; background-color: #f8f8f8; margin: 1.5rem 0;">
 
-## Activity: Determine Which GBIF Datasets Are Fit for Use
+<h2>Activity: Determine Which GBIF Datasets Are Fit for Use</h2>
 
 Datasets for this activity:
 
@@ -98,46 +98,48 @@ Datasets for this activity:
 - [iNaturalist dataset](datasets/inaturlist.xls)  
 - [Observation.org dataset](datasets/observations.org.xls)  
 
-In this activity, you will evaluate four biodiversity datasets downloaded from GBIF, iNaturalist, eBird, Observation.org, and the Norwegian Species Observation Service. Your goal is to decide which of these datasets is best suited for creating an accurate map.
+In this activity, you will evaluate four biodiversity datasets downloaded from GBIF, iNaturalist, eBird, Observation.org, and the Norwegian Species Observation Service. Your goal is to decide which of these datasets is best suited for creating an accurate map.  
 Using the guiding questions below, examine each dataset and determine whether the geographic metadata is complete, reliable, and precise enough for mapping.
 
 Use these questions to evaluate each dataset:
 
-1. Does the dataset include decimalLatitude and decimalLongitude?
-       -If no, the dataset cannot be used for mapping.  
+1. Does the dataset include decimalLatitude and decimalLongitude?  
+   - If no, the dataset cannot be used for mapping.  
 
 2. Does it include the country and state/province where the occurrence happened?  
-       -Missing administrative information makes it hard to confirm accuracy.  
+   - Missing administrative information makes it hard to confirm accuracy.  
 
 3. Does it include a locality description?  
-       -Locality provides important context for verifying the coordinates.  
+   - Locality provides important context for verifying the coordinates.  
 
 4. Does the locality match the latitude and longitude?  
-       -Compare textual locality with coordinates to detect mismatches.  
+   - Compare textual locality with coordinates to detect mismatches.  
 
 5. Is coordinateUncertaintyInMeters included?  
-       -High values may limit the usefulness of the data.  
+   - High values may limit the usefulness of the data.  
 
 6. Are there records with a value of 0 in coordinateUncertaintyInMeters?  
-       -A value of 0 is never valid in Darwin Core and suggests missing or unreliable uncertainty information.  
+   - A value of 0 is never valid in Darwin Core and suggests missing or unreliable uncertainty information.  
 
 7. Does the dataset include the date and who recorded the occurrence?  
-       -eventDate and recordedBy help establish data quality and traceability.  
+   - eventDate and recordedBy help establish data quality and traceability.  
 
 8. Does it include any other accuracy elements?  
-       -One example would be coordinatePrecision.  
+   - One example would be coordinatePrecision.  
 
 9. Is there an issue field with comments about potential location problems?  
-       -GBIF’s issue field flags data quality problems such as invalid coordinates or mismatched locality.  
+   - GBIF’s issue field flags data quality problems such as invalid coordinates or mismatched locality.  
 
 10. Which fields are left blank?  
-    -Missing fields may indicate poor documentation or unreliable spatial data.  
+    - Missing fields may indicate poor documentation or unreliable spatial data.  
 
-11. How does missing data in fields such as, coordinatePrecision impact the validity of the map you want to create?  
+11. How does missing data in fields such as coordinatePrecision impact the validity of the map you want to create?  
 
 12. How do the documented issues affect the accuracy of the mapped locations?  
-    -Consider whether the dataset would create misleading or incorrect spatial patterns.
- </div>
+    - Consider whether the dataset would create misleading or incorrect spatial patterns.
+
+</div>
+
 
 
 # Metadata and Visualization
